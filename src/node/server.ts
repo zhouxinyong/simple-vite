@@ -1,7 +1,7 @@
 import http, { Server } from 'http'
 import Koa from 'koa'
 import chokidar, { FSWatcher } from 'chokidar'
-// import { modulesPlugin } from './serverPluginModules'
+import { modulesPlugin } from './serverPluginModules'
 import { vuePlugin } from './serverPluginVue'
 import { hmrPlugin } from './serverPluginHmr'
 import { servePlugin } from './serverPluginServe'
@@ -21,7 +21,7 @@ export interface ServerConfig {
 }
 
 const internalPlugins: Plugin[] = [
-  // modulesPlugin,
+  modulesPlugin,
   vuePlugin,
   hmrPlugin,
   servePlugin
